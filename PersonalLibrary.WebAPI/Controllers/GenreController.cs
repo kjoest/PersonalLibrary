@@ -50,6 +50,7 @@ namespace PersonalLibrary.WebAPI.Controllers
             return Ok(genre);
         }
         [HttpGet]
+        [Route("api/Genre/{GenreType}")]
         public IHttpActionResult GetByType([FromUri] string genreType)
         {
             if (genreType == null)
